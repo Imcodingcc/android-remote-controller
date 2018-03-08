@@ -11,7 +11,7 @@ download the project, import to androidStudio3.0, and you can compile it.
 
 Cmake compiled executeable file in src/main/assets/armeabi/server, you can push the "server" file to android device /data/local/tmp/ to execute.
 
-"server" executeable is for create linux touchpad device, 
+"server" executeable is for create linux touchpad device and controll it
 
 somewhere ipaddr and prot need to be changed where for your tomcat server.
 
