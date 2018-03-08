@@ -16,5 +16,8 @@ Cmake compiled executeable file in src/main/assets/armeabi/server, you can push 
 somewhere ipaddr and prot need to be changed where for your tomcat server.
 
 ## the other source code is here
+https://github.com/Imcodingcc/android-remote-controller-server
+https://github.com/Imcodingcc/android-remote-controller-brower
+
 
 ### Please leave a message
