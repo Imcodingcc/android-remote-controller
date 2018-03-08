@@ -24,7 +24,8 @@ add_library( # Sets the name of the library.
 
 include_directories( src/main/cpp/include/jsoncpp
                      src/main/cpp/include/uinput
-                     src/main/cpp/include/uinputManager)
+                     src/main/cpp/include/uinputManager
+                     src/main/cpp/include/signleTouch)
 
 add_library(jsoncpp STATIC IMPORTED)
 set_target_properties(jsoncpp
@@ -57,6 +58,7 @@ target_link_libraries( # Specifies the target library.
                        ${log-lib} )
 
 add_executable(server src/main/cpp/socketserver.cpp
-                      src/main/cpp/uinput.cpp )
-target_link_libraries(server jsoncpp)
+                      src/main/cpp/uinput.cpp
+                      src/main/cpp/signleTouch.cpp)
+target_link_libraries(server jsoncpp ${libcutils} ${libc})
 target_include_directories (server PUBLIC ${CMAKE_SOURCE_DIR}/src/main/cpp/include)

@@ -5,5 +5,5 @@ package com.lv.qiang.touch;
  */
 
 public class ConstValue {
-    public static String socketController = "192.168.1.242";
+    public static String socketController = "localhost";
 }

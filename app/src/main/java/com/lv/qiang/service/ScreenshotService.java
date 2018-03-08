@@ -48,7 +48,7 @@ public class ScreenshotService extends Service
     {
         super.onCreate();
         new WsScreenClient(jpgQueue);
-        new WsOptClient();
+        WsOptClient.getDefault();
         createSurface();
         startOnUIThread();
     }

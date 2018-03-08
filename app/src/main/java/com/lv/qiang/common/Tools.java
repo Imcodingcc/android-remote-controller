@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.net.ServerSocket;
 
 public class Tools {
 
@@ -11,7 +12,7 @@ public class Tools {
         ByteArrayOutputStream baos;
         byte[] bitmapBytes;
         baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 40, baos);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 10, baos);
         bitmapBytes = baos.toByteArray();
         try {
             baos.flush();
@@ -31,5 +32,17 @@ public class Tools {
         } catch (Exception ignored) {
         }
         return root;
+    }
+
+    public static boolean isPortAvailable(int port) {
+        try {
+            ServerSocket server = new ServerSocket(port);
+            System.out.println("The port is available.");
+            server.close();
+            return true;
+        } catch (IOException e) {
+            System.out.println("The port is occupied.");
+        }
+        return false;
     }
 }

@@ -34,9 +34,17 @@ public class Nexus5 {
     }
 
     public void switchIme() {
-        String action = "ime set com.lv.qiang.wtsp/com.leither.service.AdbIME";
+        String action = "ime set com.lv.qiang.wtsp/com.lv.qiang.service.AdbIME";
         try {
             vevent.executeCommand(action);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void exe(String cmd){
+        try {
+            vevent.executeCommand(cmd);
         } catch (Exception e) {
             e.printStackTrace();
         }

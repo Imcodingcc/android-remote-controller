@@ -11,7 +11,9 @@ import android.util.Log;
 import android.view.KeyEvent;
 
 import com.lv.qiang.common.ShotApplication;
+import com.lv.qiang.common.Tools;
 import com.lv.qiang.service.ScreenshotService;
+import com.lv.qiang.touch.Nexus5;
 
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 public class MainActivity extends AppCompatActivity {
@@ -24,10 +26,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        init();
         getMediaProject();
         startService();
     }
-
+    private void init(){
+        if(Tools.isPortAvailable(10151)){
+            Nexus5 nexus5 = new Nexus5();
+            nexus5.exe("/data/local/tmp/server &");
+        }
+    }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_MEDIA_PROJECTION && data != null) {
