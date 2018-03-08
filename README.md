@@ -4,7 +4,7 @@ you can use chrome brower to control remote phone which is installed this app
 the app is my prepare for interview demo, this can be used to remote controll.
 
 # Phone precondition
-## > android5.0 rooted
+####  > android5.0 rooted
 
 # Install
 download the project, import to androidStudio3.0, and you can compile it.
