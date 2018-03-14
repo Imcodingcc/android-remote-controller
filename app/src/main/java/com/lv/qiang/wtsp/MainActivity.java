@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private void init(){
         if(Tools.isPortAvailable(10151)){
             Nexus5 nexus5 = new Nexus5();
-            nexus5.exe("/data/local/tmp/server &");
+            nexus5.executeCommand("/data/local/tmp/server &");
         }
     }
     @Override
