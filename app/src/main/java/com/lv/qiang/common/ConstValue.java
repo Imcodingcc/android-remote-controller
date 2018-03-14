@@ -1,7 +1,6 @@
 package com.lv.qiang.common;
 
-
 public class ConstValue {
-    public static String wsScreen = "ws://192.168.1.73:8080/phoneScreen";
-    public static String wsController = "ws://192.168.1.73:8080/controllerPhone";
+    public static String wsScreen = "ws://47.93.4.168:8080/WTSP-1.0-SNAPSHOT/phoneScreen";
+    public static String wsController = "ws://47.93.4.168:8080/WTSP-1.0-SNAPSHOT/controllerPhone";
 }
