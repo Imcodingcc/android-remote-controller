@@ -1,7 +1,5 @@
 package com.lv.qiang.ws;
 
-import android.util.Log;
-
 import com.koushikdutta.async.http.AsyncHttpClient;
 import com.koushikdutta.async.http.WebSocket;
 import com.lv.qiang.common.ConstValue;
